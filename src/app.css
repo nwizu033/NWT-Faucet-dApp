@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red{
+    color: red;
+}
+
+.container {
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('./faucet-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+:root {
+    --text-color: rgb(256, 256, 256);
+}
+
+.container header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+}
+header span{
+    background-image: linear-gradient(to right, #0f2424, #e9e60e);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+header button{
+    background: linear-gradient(to right, #30CFD0, #c43ad6);
+    padding: 0.2rem 0.5rem;
+    height: 2rem;
+    border: transparent;
+    border-radius: 2rem;
+}
+
+
+h1 span{
+    font-size: 3rem;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #30CFD0, #c43ad6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.container .request-body{
+    margin-top: 5rem;
+      text-align: center;
+    }
+
+    .request-body .details{
+        background-color: white;
+        color: #000606;
+        text-align: left;
+        width: 50%;
+        margin: 4rem 0 0 22.5%;
+        padding: 3rem;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .details input{
+        width: 75%;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        color: white;
+        border: 2px double transparent;
+        background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    }
+
+    .details button{
+        background: linear-gradient(to right, #30CFD0, #c43ad6);
+        border: transparent;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        margin-left: 1rem;
+        width: 15%;
+    }
+
+    .details .transaction-details{
+        width: 100%;
+        margin-top: 2rem;
+        background: black;
+        padding: 0.5rem;
+        color: white;
+    }
+
+    .details .txn-hash{
+        width: fit-content;
+    }
+
+    /* .transaction-details  */
+
+
+
+
+    /* Media queries */
+    @media screen and (max-width: 600px) {
+        .container {
+            height: 100%;
+        }
+
+        .container .request-body{
+            margin-top: 3rem;
+              text-align: center;
+            }
+
+        .request-body .details{
+            background-color: white;
+            width: 80%;
+            margin-left: 5%;
+            padding: 2rem;
+        }
+
+        .details input{
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        .details button{
+            padding: 0.5rem;
+            margin-left: 25%;
+            margin-top: 1rem;
+            width: 50%;
+        }
+       
+
+    }
+    /* 400 media queries */
+    @media screen and (max-width: 400px) {
+        .container {
+            height: 100%;
+        }
+
+        h1{
+            font-size: 1rem;
+        }
+        .request-body .details{
+            background-color: white;
+            width: 80%;
+            margin-left: 2%;
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .details input{
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        .details button{
+            padding: 0.5rem;
+            margin-left: 28%;
+            margin-top: 1rem;
+            width: 50%;
+        }
+
+        .details .txn-hash{
+            font-size: x-small;
+        }
+
+    }
