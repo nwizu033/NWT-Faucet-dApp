@@ -59,8 +59,11 @@ const getTokens = async () => {
               <h1><span>Welcome To Nwizu Token Faucets</span></h1>
               <p>You can get 100NWT every hour</p>
               <div className="details">
+                  <div className="top">
                   <input type="text" placeholder="Enter Your wallet Address" onChange={(e)=>{setAddress(e.target.value)}}/>
                   <button onClick={getTokens}>Get Tokens</button>
+                  </div>
+             
                   <div className="transaction-details">Transaction Details</div>
                   <p className="txn-hash">transaction hash: {transHash}</p>
                   {(error==='')? <p></p> : <p className="red">{error}</p>}  

@@ -2,9 +2,12 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('./faucet-bg.png');
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('./faucet-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    
 }
 
 .red{
@@ -12,8 +15,10 @@ body{
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     color: var(--text-color);
+   
 }
 
 :root {
@@ -64,30 +69,37 @@ h1 span{
         color: #000606;
         text-align: left;
         width: 50%;
-        margin: 4rem 0 0 22.5%;
+        margin: 5rem 25%;
         padding: 3rem;
         border-radius: 2rem;
-        margin-bottom: 2rem;
+        box-sizing: border-box;
+    }
+
+    .details .top{
+        display: flex;
+        align-items: stretch;
+        width: 100%;
     }
 
     .details input{
-        width: 75%;
+        width: 50%;
         padding: 0.5rem;
-        border-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .details button{
+        padding: 0.5rem;
+        width: 50%;
         color: white;
         border: 2px double transparent;
         background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
         background-origin: border-box;
         background-clip: padding-box, border-box;
-    }
-
-    .details button{
-        background: linear-gradient(to right, #30CFD0, #c43ad6);
-        border: transparent;
-        border-radius: 2rem;
-        padding: 0.5rem;
-        margin-left: 1rem;
-        width: 15%;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+      
     }
 
     .details .transaction-details{
@@ -96,58 +108,33 @@ h1 span{
         background: black;
         padding: 0.5rem;
         color: white;
+        box-sizing: border-box;
     }
 
     .details .txn-hash{
         width: fit-content;
     }
 
-    /* .transaction-details  */
+
+
+
 
 
 
 
     /* Media queries */
     @media screen and (max-width: 600px) {
+        body{
+            min-height: 100%;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
         .container {
             height: 100%;
-        }
-
-        .container .request-body{
-            margin-top: 3rem;
-              text-align: center;
-            }
-
-        .request-body .details{
-            background-color: white;
-            width: 80%;
-            margin-left: 5%;
-            padding: 2rem;
-        }
-
-        h1 span{
-            font-size: 2rem;
-        }
-
-        .request-body p{
-            font-size: 0.8rem;
-        }
-        .details input{
             width: 100%;
-            padding: 0.5rem;
+           
         }
-
-        .details button{
-            padding: 0.5rem;
-            margin-left: 25%;
-            margin-top: 1rem;
-            width: 50%;
-        }
-       
-
-    }
-    /* 400 media queries */
-    @media screen and (max-width: 400px) {
         header span{
             padding: 0.5rem;
             font-size: 1.1rem;
@@ -175,11 +162,13 @@ h1 span{
 
         .request-body .details{
             background-color: white;
-            width: 80%;
-            margin-left: 2%;
+            width: 100%;
+            margin-left: 0;
             padding: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 4rem;
+            margin-top: 7rem;
+            margin-bottom: 7rem;
+            box-sizing: border-box;
+            
         }
 
         .request-body p{
@@ -193,9 +182,91 @@ h1 span{
 
         .details button{
             padding: 0.5rem;
-            margin-left: 28%;
-            margin-top: 1rem;
-            width: 50%;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .transaction-details{
+            box-sizing: border-box;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+    /* 400 media queries */
+    @media screen and (max-width: 400px) {
+
+        body{
+            min-height: 100%;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+           
+        }
+        header span{
+            padding: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        header button{
+            
+            padding: 0.1rem 0.3rem;
+            height: 1.5rem;
+            border-radius: 2rem;
+        }
+
+        .container header{
+            padding: 1rem 1.5rem;
+        }
+
+        h1 span{
+            font-size: 1.2rem;
+        }
+
+        .container .request-body{
+            margin-top: 2rem;
+              text-align: center;
+            }
+
+        .request-body .details{
+            background-color: white;
+            width: 100%;
+            margin-left: 0;
+            padding: 2rem;
+            margin-top: 7rem;
+            margin-bottom: 7rem;
+            box-sizing: border-box;
+            
+        }
+
+        .request-body p{
+            font-size: 0.7rem;
+        }
+
+        .details input{
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        .details button{
+            padding: 0.5rem;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .transaction-details{
+            box-sizing: border-box;
         }
 
         .details .txn-hash{
